@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select name="" id="national">
+        <option>pakistan</option>
+        <option>Saudi</option>
+        <option>India</option>
+    </select>
+    <select name="" id="education">
+        <option>masters</option>
+        <option>inter</option>
+        <option>matric</option>
+    </select>
+    <input type="number" placeholder="Enter number" id="age">
+    <h1 id="result"></h1>
+<button onclick="check()">Check</button>
+
+    <script>
+
+
+function check(){
+    var national = document.getElementById("national").value;
+        var height = 5.5;
+        var age = parseInt(document.getElementById("age").value)
+        var education = document.getElementById("education").value;
+    // console.log("age==>",age);
+    // console.log("education===>",education);
+    // console.log("nationality==>",national);
+
+    if(national === "pakistan" && height >= 5.5){
+ 
+ if((age >= 18 && age <= 22) ||(age >= 18 && age <= 28 && education === "masters")) {
+     document.getElementById("result").innerHTML = "Selected";
+
+ }
+ else{
+    document.getElementById("result").innerHTML = " Not Selected";
+ }
+}
+else{
+    document.getElementById("result").innerHTML = " Not Selected";
+ }
+
+}
+
+
+    </script>
+</body>
+</html>
